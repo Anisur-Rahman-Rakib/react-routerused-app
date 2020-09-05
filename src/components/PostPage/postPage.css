@@ -1,3 +1,14 @@
-.post-design{
+/* .post-design{
     border: 1px solid #ccc;
+} */
+#custom-design{
+    float:left;
+    width: 25%;
+   margin-bottom: 40px;
+}
+.title-design{
+    height: 150px;
+}
+.post-design{
+    height: 150px;
 }
