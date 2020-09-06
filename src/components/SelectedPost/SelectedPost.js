@@ -1,15 +1,14 @@
 import React from 'react';
-import  '../../components/PostPage/postPage.css';
-import { Button } from '@material-ui/core';
+// import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
+// import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 // import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -21,12 +20,15 @@ const useStyles = makeStyles({
 });
 
 
-const PostPage = (props) => {
-    const {title , body ,id} = props.showpost;
+const SelectedPost = (props) => {
+    const {title , body ,id, userId} = props.selectPost;
     const classes = useStyles();
     return (
-
-        <Card id='custom-design' className={classes.root}>
+        <div>
+            <h1>This is selected Post</h1>
+          <h2>  User Id : {userId}</h2>
+            <h2> Post Id : {id}</h2>
+            <Card id='custom-design' className={classes.root}>
         <CardActionArea>
           {/* <CardMedia
             className={classes.media}
@@ -42,23 +44,17 @@ const PostPage = (props) => {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
+        {/* <CardActions>
           <Button  variant="contained" size="small" color="primary">
             Share
           </Button>
           <Button component={Link} to={`/posts/${id}`} size="small" variant="contained" color="secondary">
             Learn More
           </Button>
-        </CardActions>
+        </CardActions> */}
       </Card>
-    //     <div className="post-design">
-    
-    // <h4>id :{id }</h4>
-    // <h2> Post Title : {title}</h2>
-    // <h3>Post:<p>{body}</p></h3>
-    // <Button color="primary">Hello World</Button>
-    //     </div>
+        </div>
     );
 };
 
-export default PostPage;
+export default SelectedPost;
