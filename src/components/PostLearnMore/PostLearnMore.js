@@ -11,9 +11,12 @@ const PostLearnMore = () => {
         .then(res => res.json())
         .then(data=> setSelectPost(data))
     },)
+
+
+
     return (
         <div>
-           <SelectedPost selectPost={selectPost}></SelectedPost>
+           <SelectedPost  selectPost={selectPost}></SelectedPost>
         </div>
     );
 };
